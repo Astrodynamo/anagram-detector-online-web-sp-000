@@ -7,7 +7,8 @@ class Anagram
   
   def match (anagrams)
     @matches = []
-    anagrams.each {|anagram| anagram.split("").sort == @word.split("").sort @matches << anagram }
+    anagrams.each {|anagram| @matches << anagram if anagram.split("").sort == @word.split("").sort }
+    @matches
   end
   
 end
